@@ -1,0 +1,9 @@
+.resultados{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+h1{
+    background-color: whitesmoke;
+}

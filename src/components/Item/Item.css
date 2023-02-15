@@ -1,0 +1,75 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin: 10px;
+    margin-top: 15px;
+    background-color: #1E5128;
+
+}
+
+.cardHeader {
+    background-color: #191A19;
+    color: #D8E9A8;
+    padding-top: 8;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.card-text {
+    color: #D8E9A8;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    --color: #191A19;
+    font-family: inherit;
+    width: 10em;
+    height: 2.6em;
+    line-height: 2.5em;
+    overflow: hidden;
+    margin: 20px;
+    font-size: 17px;
+    z-index: 1;
+    color: var(--color);
+    border: 2px solid var(--color);
+    border-radius: 6px;
+    position: relative;
+}
+
+.button::before {
+    position: absolute;
+    content: "";
+    background: var(--color);
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+
+}
+
+.button:hover {
+    color: white;
+}
+
+.button:before {
+    top: 100%;
+    left: 100%;
+    transition: .8s all;
+}
+
+.button:hover::before {
+    top: -30px;
+    left: -30px;
+}
