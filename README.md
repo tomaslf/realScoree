@@ -1,4 +1,4 @@
-<img src="realscorelogo.png" width=250px height=150px>
+<img src="./public/realscorelogo.png" width=250px height=150px>
 
 # WebApp Real Score 
 
