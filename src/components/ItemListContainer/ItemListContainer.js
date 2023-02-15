@@ -34,6 +34,13 @@ const ItemListContainer = () => {
         getResults();
     }, [competition])
 
+    const [loader, setLoader] = useState(true)
+    useEffect(() => {
+        setTimeout(() => {
+            setLoader(false)
+
+        }, 5000);
+    }, [])
 
 
     return (
@@ -68,7 +75,16 @@ const ItemListContainer = () => {
                 </Carousel.Item>
 
             </Carousel>
-            <ItemList lista={resultados} />
+            {(loader) ?
+                <div class="box">
+                    <div class="shadow"></div>
+                    <div class="gravity">
+                        <div class="ball"></div>
+                    </div>
+                </div>
+                 : 
+                 <ItemList lista={resultados} />}
+
         </div>
     )
 }
