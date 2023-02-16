@@ -1,3 +1,9 @@
+#cardLoader{
+    display: flex;
+    justify-content: space-around;
+
+}
+
 .box {
     margin: 0 auto;
     width: 150px;

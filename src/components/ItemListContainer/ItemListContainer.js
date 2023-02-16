@@ -3,12 +3,14 @@ import { useEffect, useState } from "react";
 import { ItemList } from '../ItemList/ItemList';
 import Carousel from 'react-bootstrap/Carousel';
 import { useParams } from 'react-router-dom';
+import { Card, Placeholder } from 'react-bootstrap';
 
 
 
 const ItemListContainer = () => {
     const [resultados, setResultados] = useState([]);
     const { competition } = useParams();
+
 
 
 
@@ -76,14 +78,60 @@ const ItemListContainer = () => {
 
             </Carousel>
             {(loader) ?
-                <div class="box">
-                    <div class="shadow"></div>
-                    <div class="gravity">
-                        <div class="ball"></div>
+                <div id='cardLoader'>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Body>
+                            <Placeholder as={Card.Title} animation="glow">
+                                <Placeholder xs={6} />
+                            </Placeholder>
+                            <Placeholder as={Card.Text} animation="glow">
+                                <Placeholder xs={7} /> <Placeholder xs={4} /> <Placeholder xs={4} />{' '}
+                                <Placeholder xs={6} /> <Placeholder xs={8} />
+                            </Placeholder>
+                            <Placeholder.Button variant="secondary" xs={6} />
+                        </Card.Body>
+                    </Card>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Body>
+                            <Placeholder as={Card.Title} animation="glow">
+                                <Placeholder xs={6} />
+                            </Placeholder>
+                            <Placeholder as={Card.Text} animation="glow">
+                                <Placeholder xs={7} /> <Placeholder xs={4} /> <Placeholder xs={4} />{' '}
+                                <Placeholder xs={6} /> <Placeholder xs={8} />
+                            </Placeholder>
+                            <Placeholder.Button variant="secondary" xs={6} />
+                        </Card.Body>
+                    </Card>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Body>
+                            <Placeholder as={Card.Title} animation="glow">
+                                <Placeholder xs={6} />
+                            </Placeholder>
+                            <Placeholder as={Card.Text} animation="glow">
+                                <Placeholder xs={7} /> <Placeholder xs={4} /> <Placeholder xs={4} />{' '}
+                                <Placeholder xs={6} /> <Placeholder xs={8} />
+                            </Placeholder>
+                            <Placeholder.Button variant="secondary" xs={6} />
+                        </Card.Body>
+                    </Card>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Body>
+                            <Placeholder as={Card.Title} animation="glow">
+                                <Placeholder xs={6} />
+                            </Placeholder>
+                            <Placeholder as={Card.Text} animation="glow">
+                                <Placeholder xs={7} /> <Placeholder xs={4} /> <Placeholder xs={4} />{' '}
+                                <Placeholder xs={6} /> <Placeholder xs={8} />
+                            </Placeholder>
+                            <Placeholder.Button variant="secondary" xs={6} />
+                        </Card.Body>
+                    </Card>
                     </div>
-                </div>
-                 : 
-                 <ItemList lista={resultados} />}
+
+
+                :
+                <ItemList lista={resultados} />}
 
         </div>
     )
